@@ -7,8 +7,8 @@ function getSunriseSunset() {
 
   // You may add additional validation for latitude and longitude inputs here
 
-  const todayUrl = https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude};
-  const tomorrowUrl = https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow;
+  const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}`;
+  const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow`;
 
   // Fetch data for today
   fetch(todayUrl)
@@ -43,7 +43,7 @@ function displayResult(day, data) {
 
   if (data.status === 'OK') {
     const results = data.results;
-    resultDiv.innerHTML += <h2>${day}</h2>;
+    resultDiv.innerHTML += `<h2>${day}</h2>`;
     resultDiv.innerHTML += `
       <p>Sunrise: ${results.sunrise}</p>
       <p>Sunset: ${results.sunset}</p>
@@ -54,7 +54,7 @@ function displayResult(day, data) {
       <p>Timezone: ${results.timezone}</p>
       <hr>`;
   } else {
-    resultDiv.innerHTML += <h2>${day}</h2>;
+    resultDiv.innerHTML += `<h2>${day}</h2>`;
     resultDiv.innerHTML += '<p>Error retrieving data. Please try again.</p>';
     resultDiv.innerHTML += '<hr>';
   }
@@ -101,12 +101,12 @@ function searchLocation() {
     return;
   }
 
-  const apiUrl = https://geocode.maps.co/search?q=${encodeURIComponent(city)};
+  const apiUrl = `https://geocode.maps.co/search?q=${encodeURIComponent(city)}`;
 
   fetch(apiUrl)
     .then(response => {
       if (!response.ok) {
-        throw new Error(HTTP error! Status: ${response.status});
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
       return response.json();
     })
@@ -119,7 +119,7 @@ function searchLocation() {
           const latitude = firstResult.lat;
           const longitude = firstResult.lon;
           const displayName = firstResult.display_name;
-          resultElement.textContent = Location of ${displayName}: Latitude ${latitude}, Longitude ${longitude};
+          resultElement.textContent = `Location of ${displayName}: Latitude ${latitude}, Longitude ${longitude}`;
         } else {
           resultElement.textContent = 'Latitude and Longitude information not available for the first result.';
         }
@@ -132,3 +132,4 @@ function searchLocation() {
       resultElement.textContent = 'An error occurred while fetching data.';
     });
 }
+
