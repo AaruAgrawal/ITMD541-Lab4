@@ -115,8 +115,9 @@ function searchLocation() {
         if (firstResult.lat && firstResult.lon) {
           const latitude = firstResult.lat;
           const longitude = firstResult.lon;
-          const displayName = firstResult.display_name;
-          resultElement.textContent = `Location of ${displayName}: Latitude ${latitude}, Longitude ${longitude}`;
+          document.getElementById('latitude').value = latitude;
+          document.getElementById('longitude').value = longitude;
+          getSunriseSunset(); // Fetch sunrise and sunset data for the new location
         } else {
           resultElement.textContent = 'Latitude and Longitude information not available for the first result.';
         }
@@ -129,4 +130,3 @@ function searchLocation() {
       resultElement.textContent = 'An error occurred while fetching data.';
     });
 }
-
