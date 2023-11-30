@@ -1,11 +1,10 @@
 function getSunriseSunset() {
-  // Clear previous results
+ 
   clearResults();
 
   const latitude = document.getElementById('latitude').value;
   const longitude = document.getElementById('longitude').value;
 
-  // You may add additional validation for latitude and longitude inputs here
 
   const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}`;
   const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow`;
@@ -83,12 +82,10 @@ function getCurrentLocation() {
   }
 }
 
-// Corrected searchLocation function
 function searchLocation() {
   const cityInput = document.getElementById('locationQuery');
   const resultElement = document.getElementById('result');
 
-  // Check if the input element exists
   if (!cityInput) {
     console.error('Error: Unable to find input element with ID "locationQuery".');
     return;
