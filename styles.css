@@ -11,7 +11,7 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  text-align: center; /* Center align the entire content */
+  text-align: center; 
 }
 
 h1 {
@@ -43,16 +43,15 @@ input {
   text-align: center;
 }
 
-/* Add margin between buttons */
 button {
   background-color: #3498db;
   color: white;
   padding: 8px;
   border: none;
   cursor: pointer;
-  width: 48%; /* Adjusted width to leave space for the margin */
+  width: 48%;
   border-radius: 4px;
-  margin: 0 2%; /* Added margin between buttons */
+  margin: 0 2%; 
   transition: background-color 0.3s;
   font-weight: bold;
 }
