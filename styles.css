@@ -42,11 +42,11 @@ input {
 button {
   background-color: #3498db;
   color: white;
-  padding: 8px;
+  padding: 8px; /* Reduced padding */
   border: none;
   cursor: pointer;
-  width: 50%; /* Reduced button width to 50% */
-  margin-top: 15px;
+  width: 50%; /* Reduced button length */
+  margin: 0 auto; /* Center alignment */
   border-radius: 4px;
   transition: background-color 0.3s;
   font-weight: bold;
@@ -61,4 +61,3 @@ button:hover {
   color: #333;
   font-weight: bold;
 }
-
