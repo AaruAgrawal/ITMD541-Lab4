@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .container {
   max-width: 600px;
   margin: 50px auto;
@@ -53,13 +52,9 @@ button {
   cursor: pointer;
   width: 48%; /* Adjusted width to leave space for the margin */
   border-radius: 4px;
+  margin: 0 2%; /* Added margin between buttons */
   transition: background-color 0.3s;
   font-weight: bold;
-  margin-right: 4%; /* Added margin between buttons */
-}
-
-button:last-child {
-  margin-right: 0; /* Remove margin from the last button */
 }
 
 button:hover {
