@@ -5,7 +5,6 @@ body {
   padding: 0;
 }
 
-
 .container {
   max-width: 600px;
   margin: 50px auto;
@@ -45,16 +44,22 @@ input {
   text-align: center;
 }
 
+/* Add margin between buttons */
 button {
   background-color: #3498db;
   color: white;
   padding: 8px;
   border: none;
   cursor: pointer;
-  width: 50%;
+  width: 48%; /* Adjusted width to leave space for the margin */
   border-radius: 4px;
   transition: background-color 0.3s;
   font-weight: bold;
+  margin-right: 4%; /* Added margin between buttons */
+}
+
+button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
 }
 
 button:hover {
